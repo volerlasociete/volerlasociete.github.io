@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>volerlasociete</title>
+<style>
+  :root{
+    --bg: #0b0b0c;
+    --bg-raised: #131315;
+    --text: #eae7e1;
+    --text-dim: #8a8781;
+    --line: #26241f;
+    --accent: #b5432f;
+  }
+
+  *{ box-sizing: border-box; }
+
+  html{ scroll-behavior: smooth; }
+
+  body{
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Courier New', ui-monospace, Menlo, monospace;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a{ color: inherit; }
+
+  /* ---------- header ---------- */
+  header{
+    padding: 6rem 1.5rem 4rem;
+    max-width: 900px;
+    margin: 0 auto;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .eyebrow{
+    color: var(--accent);
+    font-size: 0.8rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    margin-bottom: 1.25rem;
+  }
+
+  h1{
+    font-family: Georgia, 'Times New Roman', serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: clamp(2.4rem, 7vw, 4.5rem);
+    line-height: 1.05;
+    margin: 0 0 1.5rem;
+    letter-spacing: -0.01em;
+  }
+
+  header p{
+    color: var(--text-dim);
+    max-width: 46ch;
+    font-size: 0.95rem;
+    margin: 0;
+  }
+
+  nav{
+    margin-top: 2.5rem;
+    display: flex;
+    gap: 1.75rem;
+    font-size: 0.85rem;
+  }
+
+  nav a{
+    text-decoration: none;
+    color: var(--text-dim);
+    border-bottom: 1px solid transparent;
+    padding-bottom: 2px;
+    transition: color 0.2s ease, border-color 0.2s ease;
+  }
+
+  nav a:hover{
+    color: var(--text);
+    border-color: var(--accent);
+  }
+
+  /* ---------- works list ---------- */
+  main{
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem 2rem;
+  }
+
+  section{
+    margin-bottom: 5rem;
+  }
+
+  .section-title{
+    font-size: 0.8rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .section-title::after{
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--line);
+  }
+
+  .work{
+    display: grid;
+    grid-template-columns: 5rem 1fr auto;
+    gap: 1.5rem;
+    align-items: baseline;
+    padding: 1.4rem 0;
+    border-bottom: 1px solid var(--line);
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .work:first-of-type{
+    border-top: 1px solid var(--line);
+  }
+
+  .work-year{
+    color: var(--text-dim);
+    font-size: 0.85rem;
+  }
+
+  .work-title{
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.15rem;
+    font-style: italic;
+  }
+
+  .work-tag{
+    color: var(--text-dim);
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  a.work{
+    position: relative;
+  }
+
+  a.work:hover .work-title{
+    color: var(--accent);
+  }
+
+  .empty-note{
+    color: var(--text-dim);
+    font-size: 0.85rem;
+    font-style: italic;
+    padding: 1.4rem 0;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+
+  /* ---------- about ---------- */
+  .about-text{
+    color: var(--text-dim);
+    max-width: 60ch;
+    font-size: 0.92rem;
+  }
+
+  .about-text p{ margin: 0 0 1rem; }
+
+  /* ---------- footer ---------- */
+  footer{
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    color: var(--text-dim);
+    font-size: 0.8rem;
+  }
+
+  footer a{
+    text-decoration: none;
+    border-bottom: 1px solid var(--line);
+    transition: color 0.2s ease, border-color 0.2s ease;
+  }
+
+  footer a:hover{
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+
+  @media (max-width: 560px){
+    .work{
+      grid-template-columns: 3.5rem 1fr;
+    }
+    .work-tag{
+      grid-column: 2;
+      margin-top: 0.25rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="eyebrow">im scared to remove this line above the header</div>
+  <h1>volerlasociete</h1>
+  <nav>
+    <a href="#works">projects</a>
+    <a href="https://www.youtube.com/@cursefactory" target="_blank" rel="noopener">youtube</a>
+    <a href="https://github.com/volerlasociete" target="_blank" rel="noopener">github</a>
+  </nav>
+</header>
+
+<main>
+
+  <section id="works">
+    <div class="section-title">works</div>
+
+    <!--
+      TEMPLATE — copy this block to add a new entry:
+
+      <a class="work" href="#" target="_blank">
+        <span class="work-year">2026</span>
+        <span class="work-title">Title of the piece</span>
+        <span class="work-tag">Category</span>
+      </a>
+
+      Remove href="#" (or point it somewhere real) once the work has a link.
+      Delete the .empty-note div below once you add your first entry.
+    -->
+
+    <div class="empty-note">something cool</div>
+
+  </section>
+
+  <section id="about">
+    <div class="section-title">about</div>
+    <div class="about-text">
+      <p>hobbyist programmer, i know a decent amount of HTML, basic javascript, and learning C++</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <span>© <span id="year"></span> volerlasociete</span>
+  <a href="https://github.com/volerlasociete" target="_blank" rel="noopener">github.com/volerlasociete</a>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
