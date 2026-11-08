@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>volerlasociete</title>
+<title>cursefactory</title>
+<link rel="icon" type="image/gif" href="https://github.com/volerlasociete/volerlasociete.github.io/blob/main/niceone.gif?raw=true">
 <style>
   :root{
     --bg: #0b0b0c;
@@ -35,14 +36,7 @@
     max-width: 900px;
     margin: 0 auto;
     border-bottom: 1px solid var(--line);
-  }
-
-  .eyebrow{
-    color: var(--accent);
-    font-size: 0.8rem;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    margin-bottom: 1.25rem;
+    text-align: center;
   }
 
   h1{
@@ -59,12 +53,13 @@
     color: var(--text-dim);
     max-width: 46ch;
     font-size: 0.95rem;
-    margin: 0;
+    margin: 0 auto;
   }
 
   nav{
     margin-top: 2.5rem;
     display: flex;
+    justify-content: center;
     gap: 1.75rem;
     font-size: 0.85rem;
   }
@@ -101,9 +96,11 @@
     margin-bottom: 2rem;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 1rem;
   }
 
+  .section-title::before,
   .section-title::after{
     content: "";
     flex: 1;
@@ -166,15 +163,46 @@
   .about-text{
     color: var(--text-dim);
     max-width: 60ch;
+    margin: 0 auto;
+    text-align: center;
     font-size: 0.92rem;
   }
 
   .about-text p{ margin: 0 0 1rem; }
 
+  /* profile image placeholder (square) */
+  .profile-pic{
+    width: 160px;
+    height: 160px;
+    margin: 0 auto 2rem;
+    display: block;
+    object-fit: cover;
+    background: var(--bg-raised);
+    border: 1px solid var(--line);
+  }
+
+  .profile-placeholder{
+    width: 160px;
+    height: 160px;
+    margin: 0 auto 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-raised);
+    border: 1px dashed var(--line);
+    color: var(--text-dim);
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
   /* ---------- project / dopeware text ---------- */
   .section-text{
     color: var(--text-dim);
     max-width: 60ch;
+    margin: 0 auto;
+    text-align: center;
     font-size: 0.92rem;
   }
 
@@ -205,16 +233,28 @@
     color: var(--text);
   }
 
+  .section-text a{
+    text-decoration: none;
+    border-bottom: 1px solid var(--line);
+    transition: color 0.2s ease, border-color 0.2s ease;
+  }
+
+  .section-text a:hover{
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+
   /* ---------- footer ---------- */
   footer{
     max-width: 900px;
     margin: 0 auto;
     padding: 3rem 1.5rem 5rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    text-align: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 1.5rem;
     color: var(--text-dim);
     font-size: 0.8rem;
   }
@@ -244,8 +284,7 @@
 <body>
 
 <header>
-  <div class="eyebrow">there's nothing to see here, goodbye.</div>
-  <h1>volerlasociete</h1>
+  <h1>cursefactory</h1>
   <nav>
     <a href="https://www.youtube.com/@cursefactory" target="_blank" rel="noopener">youtube</a>
     <a href="https://codeberg.org/cursefactory" target="_blank" rel="noopener">codeberg</a>
@@ -254,6 +293,16 @@
 </header>
 
 <main>
+
+  <section id="about">
+    <div class="section-title">about me</div>
+
+    <img class="profile-pic" src="https://raw.githubusercontent.com/volerlasociete/volerlasociete.github.io/refs/heads/main/dean-mccoppin-4-v0-3x71y62pc0631.webp" alt="Profile picture">
+
+    <div class="about-text">
+      <p>Hardware Technician and I dabble in Amateur Electrical Engineering. I have a general understanding of JavaScript, Java, and HTML (not the greatest example here), and I'm working on and developing projects that relate to Go, C, and Rust.</p>
+    </div>
+  </section>
 
   <section id="projects">
     <div class="section-title">projects</div>
@@ -281,18 +330,9 @@
     <div class="section-text">
       <h4>Reverse engineering collective, our current projects include:</h4>
       <ul>
-        <li><strong>Goldensrc: </strong> Center project to reverse engineer the entirety of the Goldsrc engine made by Valve.</li>
-        <li><strong>bspwc: </strong> Project to port the original BSWPM on Linux to the modern Wayland platform.</li>
+        <li><strong><a href="https://codeberg.org/dopewarez/GoldenSrc" target="_blank" rel="noopener">Goldensrc</a>: </strong> Center project to reverse engineer the entirety of the Goldsrc engine made by Valve.</li>
+        <li><strong><a href="https://codeberg.org/dopewarez/bspwc" target="_blank" rel="noopener">bspwc</a>: </strong> Project to port the original BSWPM on Linux to the modern Wayland platform.</li>
       </ul>
-    </div>
-  </section>
-
-  <section id="about">
-    <div class="section-title">about</div>
-    <div class="about-text">
-      <p>Hardware Technician and I dabble in Amateur Electrical Engineering.</p>
-      <p>General understanding of JavaScript, Java, and HTML (not the greatest example here.)</p>
-      <p>Working on and developing projects that relate to Go, C, and Rust.</p>
     </div>
   </section>
 
@@ -300,15 +340,12 @@
 
 <footer>
   <span>© <span id="year"></span> cursefactory</span>
-  <a href="https://gasdrawls.onrender.com" target="_blank" rel="noopener">gasdrawls.onrender.com</a>
+  <span>cancel culture can't cancel culture</span>
 </footer>
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
-
-</body>
-</html>
 
 </body>
 </html>
